@@ -3,7 +3,7 @@ param(
     [switch]$h
 )
 
-# PID della PowerShell che esegue lo script (auto-esclusione)
+
 $SelfPid = $PID
 
 function Show-Help {
@@ -54,7 +54,7 @@ netstat -ano | Select-String '^ *TCP' | ForEach-Object {
     $remote  = $parts[2]
     $connPid = $parts[4]
 
-    # Esclude la PowerShell che esegue lo script
+
     if ($connPid -eq $SelfPid) { return }
 
     if ($remote -notmatch ':') { return }
@@ -89,7 +89,6 @@ netstat -ano | Select-String '^ *TCP' | ForEach-Object {
     }
 }
 
-# Pulizia finale dell'output
 $results = $results | Where-Object {
     $_.PID -ne 0 -and
     $_.RemoteIP -match '^\d{1,3}(\.\d{1,3}){3}$' -and
