@@ -3,7 +3,7 @@
 ### This tool is provided for educational and defensive purposes only. The author is not responsible for misuse or incorrect interpretation of the output. Always validate findings with additional tools and context.
 
 
-A PowerShell script for **local network connection analysis and threat hunting** on Windows systems.
+A PowerShell script for **network connection analysis and threat hunting** on Windows systems.
 
 The script parses active TCP connections, extracts **public remote IP addresses only**, maps them to local processes (PID and process name), and enriches the data using **ipinfo[.]io** to provide basic network intelligence.
 
