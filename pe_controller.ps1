@@ -9,7 +9,7 @@ $SelfPid = $PID
 function Show-Help {
     Write-Host @"
 Usage:
-  .\netstat-ipinfo.ps1 [-o output.txt] [-h]
+  .\pe_controller.ps1 [-o output.txt] [-h]
 
 Description:
   Analyzes active network connections (netstat -ano),
@@ -104,3 +104,4 @@ if ($o) {
 } else {
     $results | Format-Table -AutoSize
 }
+
